@@ -1,2 +1,2 @@
-# aprendendo_crud.py
+# python aprendendo.py
 print("aprendendo")
