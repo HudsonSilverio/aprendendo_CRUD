@@ -34,17 +34,17 @@ from sqlalchemy.orm import sessionmaker
 Session = sessionmaker(bind=engine)
 session = Session()
 
-novo_usuario = Usuario(nome="debora", idade=29)
+novo_usuario = Usuario(nome="regina", idade=53)
 session.add(novo_usuario)
 session.commit()
 
 print("Usuario inserido com sucesso !")
-#with Session () as session:
-    #novo_usuario = Usuario(nome="Ana", idade=25)
-    #session.add(novo_usuario)
+# with Session () as session:
+#     novo_usuario = Usuario(nome="tome", idade=21)
+#     session.add(novo_usuario)
 
 
-### codigo usado para realizar querys dentro BD usando PY
+ #codigo usado para realizar querys dentro BD usando PY
 
-#usuario = session.query(Usuario).filter_by(nome="João").first()
-#print(f"Usuario encontrado: {usuario.nome}, Idade: {usuario.idade}")
+usuario = session.query(Usuario).filter_by(nome="João").first()
+print(f"Usuario encontrado: {usuario.nome}, Idade: {usuario.idade}")
